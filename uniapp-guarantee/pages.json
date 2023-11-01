@@ -1,0 +1,65 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/tabbar/TabbarView",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#999",
+		"selectedColor": "#1890FF",
+		"borderStyle": "white",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabbar/tabbar-home.svg",
+				"selectedIconPath": "static/tabbar/tabbar-home.svg"
+			},
+			{
+				"pagePath": "pages/projectView/projectView",
+				"text": "项目",
+				"iconPath": "static/tabbar/tabbar-project.svg",
+				"selectedIconPath": "static/tabbar/tabbar-project.svg"
+			},
+			{
+				"pagePath": "",
+				"text": "",
+				"iconPath": "",
+				"selectedIconPath": ""
+			},
+			{
+				"pagePath": "pages/messageView/messageView",
+				"text": "消息",
+				"iconPath": "static/tabbar/tabbar-message.svg",
+				"selectedIconPath": "static/tabbar/tabbar-message.svg"
+			},
+			{
+				"pagePath": "pages/mineView/mineView",
+				"text": "我的",
+				"iconPath": "static/tabbar/tabbar-mine.svg",
+				"selectedIconPath": "static/tabbar/tabbar-mine.svg"
+			}
+		]
+	}
+}
