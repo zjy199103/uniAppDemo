@@ -17,8 +17,8 @@
 			</view>
 		</view>
 		<view class="">
-			
 		</view>
+		<tabbar-view :current-active='this.currentActive' @changeActive='changeActive'></tabbar-view>
 	</view>
 </template>
 
@@ -29,7 +29,8 @@
 	export default {
 		data() {
 			return {
-				swiper: []
+				swiper: [],
+				currentActive: 0
 			}
 		},
 		methods: {
@@ -38,6 +39,10 @@
 					this.swiper = res.banners;
 					console.log(res);
 				})
+			},
+			changeActive(current) {
+				this.currentActive = current;
+				console.log(this.currentActive);
 			}
 		},
 		onLoad() {
@@ -52,6 +57,7 @@
 		margin-bottom: 0px;
 		width: 100%;
 		background-color: rgb(242, 242, 242);
+		position: relative;
 
 		.headview {
 			width: 100%;
