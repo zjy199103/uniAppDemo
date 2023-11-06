@@ -22,7 +22,9 @@
 .fa-mine-select:before {
   content: url("@/static/tabbar/tabbar-mine-select.svg");
 }
-
+/* .fa-bell:before {
+	content: url("@/static/tabbar/tabbar-addbtn.svg");
+} */
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);

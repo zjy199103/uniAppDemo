@@ -43,6 +43,14 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path" : "pages/homeView/homeView",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
