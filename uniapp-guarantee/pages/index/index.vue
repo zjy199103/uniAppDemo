@@ -43,6 +43,30 @@
 			changeActive(current) {
 				this.currentActive = current;
 				console.log(this.currentActive);
+				switch (current){
+					case 0:
+					uni.switchTab({
+						url:'/pages/indexView/index.vue'
+					})
+						break;
+					case 1:
+					uni.switchTab({
+						url:'/pages/projectView/projectView'
+					})
+						break;
+					case 2:
+					uni.switchTab({
+						url:'/pages/messageView/messageView'
+					})
+						break;
+					case 3:
+					uni.switchTab({
+						url:'/pages/mineView/mineView'
+					})
+						break;
+					default:
+						break;
+				}
 			}
 		},
 		onLoad() {

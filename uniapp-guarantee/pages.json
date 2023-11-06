@@ -16,6 +16,33 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/projectView/projectView",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/messageView/messageView",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/mineView/mineView",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"globalStyle": {
@@ -24,5 +51,29 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+	    "color": "#000",
+	    "selectedColor": "#303133",
+	    "backgroundColor": "#FFFFFF",
+	    "borderStyle": "black",
+	    "list": [
+	      {
+	        "pagePath": "pages/index/index",
+	        "text":""
+	      },
+	      {
+	        "pagePath": "pages/projectView/projectView",
+	        "text":""
+	      },
+	      {
+	        "pagePath": "pages/messageView/messageView",
+	        "text":""
+	      },
+	      {
+	        "pagePath": "pages/mineView/mineView",
+	        "text":""
+	      }
+	    ]
+	  }
 }
