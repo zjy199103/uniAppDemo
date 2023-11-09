@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		项目
 	</view>
 </template>
 
@@ -18,5 +18,5 @@
 </script>
 
 <style>
-
+	
 </style>
