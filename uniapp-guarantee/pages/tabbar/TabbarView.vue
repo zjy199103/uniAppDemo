@@ -2,10 +2,9 @@
 	<view class="tabbar-view">
 		<view id="navbar">
 			<view id="bubbleWrapper">
-				<view id="bubble3" class="bubble">
-					<span class="icon">
-						<img class="addImg" src="@/static/tabbar/tabbar-addbtn.svg" />
-					</span>
+				<view id="bubble3" class="bubble ">
+					<!-- <img class="addImg" src="@/static/tabbar/tabbar-addbtn.svg" /> -->
+					<div class="add"></div>
 				</view>
 			</view>
 			<view id="menuWrapper">
@@ -40,7 +39,8 @@
 		</view>
 		<view id="bgWrapper">
 			<view id="bg"></view>
-			<view id="bgBubble"></view>
+			<view id="bgBubble">
+			</view>
 		</view>
 		<svg width="0" height="0">
 			<defs>
@@ -62,17 +62,17 @@
 	export default {
 		props: [
 			'currentActive',
-			],
-		setup(props, { emit }) {
-		},
+		],
+		setup(props, {
+			emit
+		}) {},
 		name: 'TabbarView',
 		data() {
-			return {
-			}
+			return {}
 		},
 		methods: {
 			changeCurrentActive(index) {
-				this.$emit('changeActive',index)
+				this.$emit('changeActive', index)
 			}
 		},
 	}
@@ -87,7 +87,7 @@
 		width: 100%;
 		height: 60px;
 	}
-	
+
 	.tabbarTextUnselect {
 		color: var(--text999, #999);
 		font-family: PingFang SC;
@@ -96,7 +96,7 @@
 		font-weight: 400;
 		line-height: normal;
 	}
-	
+
 	.tabbarTextSelect {
 		color: var(--primary, #1890FF);
 		font-family: PingFang SC;
@@ -129,22 +129,21 @@
 		border-radius: 50%;
 		z-index: 1;
 		transform: translateY(120%);
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
-	
+
 	.icon {
 		opacity: 0;
 	}
 
 	#bubble3 {
 		transform: translateY(0%);
-		/* bottom: 10px; */
-		
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		box-shadow:
 			0 1px 3px rgba(0, 0, 0, 0.12),
 			0 1px 2px rgba(0, 0, 0, 0.24);
+		background: linear-gradient(336deg, rgba(74 152 248), rgba(68 142 247) 70.71%);
 	}
 
 	#bubble3>span {
@@ -154,21 +153,22 @@
 	#bgWrapper {
 		filter: url(#goo);
 		width: 100%;
-		height: 100px;
+		height: 30px;
 		position: absolute;
 		bottom: 60px;
 	}
 
 	#bg {
-		background-color: #ffcc80;
-		width: 120%;
+		position: absolute;
+		background-color: rgb(242 242 242);
 		height: 100%;
-		margin-left: -10%;
+		width: 50%;
+		left: 25%;
 	}
 
 	#bgBubble {
 		position: absolute;
-		background-color: #ffcc80;
+		background-color: rgb(242 242 242);
 		width: 70px;
 		height: 70px;
 		border-radius: 50%;
@@ -223,8 +223,36 @@
 		align-items: center;
 		justify-content: center;
 	}
-	
+
 	.menu-info {
 		text-align: center;
+	}
+
+	.add {
+		width: 2px;
+		height: 2px;
+		color: #fff;
+		position: relative;
+		/* border: solid 1px blue; //添加边框可以看到加号的位置在哪里 */
+	}
+
+	.add::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+		border-top: 10px solid;
+	}
+
+	.add::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 100%;
+		transform: translate(-50%, -50%);
+		border-left: 10px solid;
 	}
 </style>
