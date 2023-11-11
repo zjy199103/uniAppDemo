@@ -6,11 +6,16 @@
  * @param {Object} method 请求的方法
  * @param {Object} contentType 请求内容类型 1=json  2=form
  */
-function request({url, data, method="GET", contentType=1}) {
-	let header = {
-		'content-type': contentType === 1 ? 'application/json' : 'application/x-www-form-urlencoded'
+function request({url, data, method="GET", contentType=1, needToken=false}) {
+	var header = {
+		'content-type': contentType === 1 ? 'application/json' : 'application/x-www-form-urlencoded',
+		'languageType': 'TC'
 	}
-	let baseUrl = "http://localhost:3000";
+	//是否需要token
+	if (needToken) {
+		header['token'] = 'token'
+	}
+	let baseUrl = "http://192.168.3.119:11002";//测试url
 	
 	return new Promise((resolve, reject)=>{
 		uni.request({
@@ -19,6 +24,7 @@ function request({url, data, method="GET", contentType=1}) {
 			method,
 			header,
 			success: (res) => {
+				console.log(res);
 				if (res.statusCode === 200) {
 					//请求成功
 					resolve(res.data);
@@ -43,6 +49,7 @@ function request({url, data, method="GET", contentType=1}) {
 				}
 			},
 			fail: (err) => {
+				console.log(method + baseUrl + url);
 				console.log("err:", err)
 				uni.showToast({
 					icon: 'none',

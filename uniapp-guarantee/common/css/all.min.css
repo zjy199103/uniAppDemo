@@ -1,15 +1,30 @@
 .fa-home:before {
   content: url("@/static/tabbar/tabbar-home.svg");
 }
+.fa-home-select:before {
+  content: url("@/static/tabbar/tabbar-home-select.svg");
+}
 .fa-project:before {
   content: url("@/static/tabbar/tabbar-project.svg");
+}
+.fa-project-select:before {
+  content: url("@/static/tabbar/tabbar-project-select.svg");
 }
 .fa-message:before {
   content: url("@/static/tabbar/tabbar-message.svg");
 }
+.fa-message-select:before {
+  content: url("@/static/tabbar/tabbar-message-select.svg");
+}
 .fa-mine:before {
   content: url("@/static/tabbar/tabbar-mine.svg");
 }
+.fa-mine-select:before {
+  content: url("@/static/tabbar/tabbar-mine-select.svg");
+}
+/* .fa-bell:before {
+	content: url("@/static/tabbar/tabbar-addbtn.svg");
+} */
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -29,50 +44,11 @@
   position: static;
   width: auto;
 }
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(/webfonts/fa-brands-400.eot);
-  src:
-    url(/webfonts/fa-brands-400.eot?#iefix) format('embedded-opentype'),
-    url(/webfonts/fa-brands-400.woff2) format('woff2'),
-    url(/webfonts/fa-brands-400.woff) format('woff'),
-    url(/webfonts/fa-brands-400.ttf) format('truetype'),
-    url(/webfonts/fa-brands-400.svg#fontawesome) format('svg');
-}
 .fab {
   font-family: 'Font Awesome 5 Brands';
 }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url(/webfonts/fa-regular-400.eot);
-  src:
-    url(/webfonts/fa-regular-400.eot?#iefix) format('embedded-opentype'),
-    url(/webfonts/fa-regular-400.woff2) format('woff2'),
-    url(/webfonts/fa-regular-400.woff) format('woff'),
-    url(/webfonts/fa-regular-400.ttf) format('truetype'),
-    url(/webfonts/fa-regular-400.svg#fontawesome) format('svg');
-}
 .far {
   font-weight: 400;
-}
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: auto;
-  src: url(/webfonts/fa-solid-900.eot);
-  src:
-    url(/webfonts/fa-solid-900.eot?#iefix) format('embedded-opentype'),
-    url(/webfonts/fa-solid-900.woff2) format('woff2'),
-    url(/webfonts/fa-solid-900.woff) format('woff'),
-    url(/webfonts/fa-solid-900.ttf) format('truetype'),
-    url(/webfonts/fa-solid-900.svg#fontawesome) format('svg');
 }
 .fa,
 .far,

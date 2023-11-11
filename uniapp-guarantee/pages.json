@@ -16,13 +16,117 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/projectView/projectView",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/messageView/messageView",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/mineView/mineView",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path" : "pages/homeView/homeView",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/loginView/loginView",
+			"style" : 
+			{
+				"enablePullDownRefresh" : false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path" : "pages/registerView/register",
+			"style" : 
+			{
+				"navigationBarTitleText" : "注册",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor" : "#FFF"
+			}
+		},
+		{
+			"path" : "pages/resetPasswordView/resetPassword",
+			"style" : 
+			{
+				"navigationBarTitleText" : "找回密码",
+				"enablePullDownRefresh" : false,
+				"navigationBarBackgroundColor" : "#FFF"
+			}
+		},
+		{
+			"path": "pages/countryCode/index",
+			"style": {
+				"navigationBarTitleText": "选择国家",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
+	"condition": {
+	    //模式配置，仅开发期间生效
+	    "current": 0, //当前激活的模式（list 的索引项）
+	    "list": [
+	      {
+	        "name": "test", //模式名称
+	        "path": "pages/loginView/loginView" //启动页面，必选
+	      }
+	    ]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+	    "color": "#000",
+	    "selectedColor": "#303133",
+	    "backgroundColor": "#FFFFFF",
+	    "borderStyle": "black",
+	    "list": [
+	      {
+	        "pagePath": "pages/index/index",
+	        "text":""
+	      },
+	      {
+	        "pagePath": "pages/projectView/projectView",
+	        "text":""
+	      },
+	      {
+	        "pagePath": "pages/messageView/messageView",
+	        "text":""
+	      },
+	      {
+	        "pagePath": "pages/mineView/mineView",
+	        "text":""
+	      }
+	    ]
+	  }
 }
