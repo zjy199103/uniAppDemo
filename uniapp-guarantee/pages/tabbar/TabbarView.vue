@@ -229,8 +229,8 @@
 	}
 
 	.add {
-		width: 2px;
-		height: 2px;
+		width: 3px;
+		height: 3px;
 		color: #fff;
 		position: relative;
 		/* border: solid 1px blue; //添加边框可以看到加号的位置在哪里 */
@@ -243,7 +243,7 @@
 		top: 50%;
 		width: 100%;
 		transform: translate(-50%, -50%);
-		border-top: 10px solid;
+		border-top: 15px solid;
 	}
 
 	.add::after {
@@ -253,6 +253,6 @@
 		top: 50%;
 		height: 100%;
 		transform: translate(-50%, -50%);
-		border-left: 10px solid;
+		border-left: 15px solid;
 	}
 </style>
