@@ -1,25 +1,25 @@
 <template>
 	<view class="tabbar-view">
 		<view class="u-flex custom-tabbar">
-			<view class="u-flex-1 h100 bg-white menu-info zindex-1">
+			<view class="u-flex-1 h100 bg-white menu-info zindex-1" @click="changeCurrentActive(0)">
 				<i class="fas " :class="[ currentActive === 0 ? 'fa-home-select' : 'fa-home'  ]"></i>
 				<view :class="[ currentActive === 0 ? 'tabbarTextSelect': 'tabbarTextUnselect' ]">首页</view>
 			</view>
-			<view class="u-flex-1 h100 bg-white menu-info zindex-1 left-tabbar-wrapper">
+			<view class="u-flex-1 h100 bg-white menu-info zindex-1 left-tabbar-wrapper" @click="changeCurrentActive(1)">
 				<i class="fas " :class="[ currentActive === 1 ? 'fa-project-select' : 'fa-project'  ]"></i>
 				<view :class="[ currentActive === 1 ? 'tabbarTextSelect': 'tabbarTextUnselect' ]">项目</view>
 			</view>
-			<view class="h100 transparent-circle-wrapper">
+			<view class="h100 transparent-circle-wrapper" @click="changeCurrentActive(4)">
 				<view class="transparent-circle"></view>
 				<view class="bubble">
 					<div class="add"></div>
 				</view>
 			</view>
-			<view class="u-flex-1 h100 bg-white menu-info zindex-1 right-tabbar-wrapper">
+			<view class="u-flex-1 h100 bg-white menu-info zindex-1 right-tabbar-wrapper" @click="changeCurrentActive(2)">
 				<i class="fas " :class="[ currentActive === 2 ? 'fa-message-select' : 'fa-message'  ]"></i>
 				<view :class="[ currentActive === 2 ? 'tabbarTextSelect': 'tabbarTextUnselect' ]">消息</view>
 			</view>
-			<view class="u-flex-1 h100 menu-info bg-white zindex-1">
+			<view class="u-flex-1 h100 menu-info bg-white zindex-1" @click="changeCurrentActive(3)">
 				<i class="fas " :class="[ currentActive === 3 ? 'fa-mine-select' : 'fa-mine'  ]"></i>
 				<view :class="[ currentActive === 3 ? 'tabbarTextSelect': 'tabbarTextUnselect' ]">我的</view>
 			</view>
@@ -31,6 +31,7 @@
 		props: [
 			'currentActive',
 		],
+		setup(props, { emit }) {},
 		name: 'TabbarView',
 		data() {
 			return {}
